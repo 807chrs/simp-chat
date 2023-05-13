@@ -1,0 +1,452 @@
+/* ---------- GLOBAL RESET ---------- */
+
+/* Import Custom Font: Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+/* Box-sizing Reset */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* ---------- MAIN [START] ---------- */
+.card {
+  width: 1080px;
+  height: 720px;
+  box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #bbbfca;
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 13%);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo span {
+  font-weight: 700;
+}
+
+.login-container h2,
+.register-container h2 {
+  margin: 15px 0 15px 0;
+}
+
+.login-container,
+.register-container {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-username,
+.login-password,
+.login-btn,
+.reg-upload,
+.reg-name,
+.reg-username,
+.reg-email,
+.reg-password,
+.reg-btn {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.login-username input,
+.login-password input,
+.reg-name input,
+.reg-username input,
+.reg-email input,
+.reg-password input {
+  height: 2em;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.login-btn button,
+.reg-btn button {
+  position: relative;
+  align-self: center;
+  width: 50%;
+}
+
+.login-redir p,
+.reg-redir p {
+  color: #525e70;
+  font-size: 0.8rem;
+  position: relative;
+  text-align: center;
+}
+
+.file-input {
+  margin-bottom: 10px;
+}
+/* ---------- MAIN [END] ---------- */
+
+/* ---------- PROFILE IMAGE STYLING [START] ---------- */
+.contact-profiles {
+  object-fit: cover;
+  object-position: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+/* ---------- PROFILE IMAGE STYLING [END] ---------- */
+
+/* ---------- CHAT CONTAINER [START] ---------- */
+.chat-header {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #bbbfca;
+}
+
+.chat-logo {
+  padding-left: 30px;
+  order: 1;
+}
+
+.chat-logout {
+  padding-right: 30px;
+  order: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .chat-header {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  .chat-logo,
+  .chat-logout {
+    position: static;
+    order: 0;
+    margin: 10px;
+  }
+
+  .chat-logout {
+    margin-top: 0;
+  }
+}
+/* ---------- CHAT HEADER [END] ---------- */
+
+/* ---------- CHAT BODY [START] ---------- */
+.chat-body {
+  width: 100%;
+  height: 86%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* --- SIDE BAR [SECTION]--- */
+.side-bar {
+  width: 35%;
+  height: 100%;
+  background-color: #e8e8e8;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-bar .title {
+  position: fixed;
+  background: #e8e8e8;
+  width: inherit;
+  height: 60px;
+}
+
+.side-bar .title h2 {
+  padding-left: 30px;
+  text-align: left;
+}
+
+.side-bar .contacts {
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #e8e8e8;
+  width: 100%;
+}
+
+.side-bar .user {
+  position: sticky;
+  bottom: 0%;
+  width: 100%;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: #bbbfca;
+}
+
+.user-profile-img {
+  padding: 15px 15px 10px 30px;
+}
+
+/* --- MESSAGE BOX [SECTION]--- */
+.chat-box {
+  width: 65%;
+  height: 100%;
+  background-color: #f4f4f2;
+}
+/* ---------- CHAT BODY [END] ---------- */
+
+/* ---------- LOGOUT BTN [START] ---------- */
+.logout-btn {
+  background-color: #495464;
+  border-radius: 50%;
+  border: 1px solid #525e70;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: 8px 13px 8px;
+}
+.logout-btn:hover {
+  background-color: #525e70;
+}
+/* ---------- LOGOUT BTN [END] ---------- */
+
+/* ---------- CONTACTS [START] ---------- */
+.contact-card-container {
+  margin-top: 70px;
+  margin-bottom: 12px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin: 10px 30px 0 30px;
+  padding-left: 20px;
+}
+
+.contact-card:hover {
+  background-color: #495464;
+}
+
+.contact-profile-img {
+  margin-right: 10px;
+}
+
+.contact-details {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details h3,
+.contact-details p {
+  margin: 0;
+}
+
+.profile-details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin: 10px;
+  padding-left: 20px;
+}
+/* ---------- CONTACTS [END] ---------- */
+
+/* ---------- WELCOME [START] ---------- */
+.welcome-wave {
+  text-align: center;
+}
+
+.welcome-char img {
+  width: 50%;
+  padding-left: 10%;
+}
+
+.welcome-text h2 span {
+  color: #525e70;
+  text-transform: uppercase;
+}
+/* ---------- WELCOME [END] ---------- */
+
+/* ---------- MESSAGE BOX [START] ---------- */
+.message-box {
+  height: 550px;
+  overflow: scroll;
+}
+
+.convo-header {
+  background-color: rgba(153, 153, 153, 0.5);
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.convo-profile-name h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.convo-profile-name p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.convo-profile-img {
+  padding: 10px 20px 10px 20px;
+}
+
+.convo-profile-img img {
+  object-fit: cover;
+  object-position: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.chat-bubble p {
+  padding: 0 30px 0;
+}
+
+.sent,
+.received {
+  border-radius: 30px;
+  width: 50%;
+  margin: 20px;
+  padding: 1px;
+  bottom: 0%;
+}
+
+.chat-bubble .sent {
+  background: #218aff;
+  text-align: right;
+  float: right;
+}
+
+.chat-bubble .received {
+  background: #39ff5a;
+  text-align: left;
+  float: left;
+}
+/* ---------- MESSAGE BOX [START] ---------- */
+.input-section {
+  /* position: relative; */
+  display: flex;
+  flex-direction: row;
+  height: 62px;
+  width: 702px;
+  margin: 0;
+}
+
+.input-section .emoji-btn button {
+  height: 100%;
+  padding: 0 20px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  color: #218aff;
+  background-color: #bbbfca;
+}
+
+.input-section .emoji-btn button:hover {
+  background-color: #dddee2;
+}
+
+.text-box form input {
+  height: 62px;
+  padding: 0 20px;
+  width: 480px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  margin: 0 10px 0;
+}
+
+.text-box form button {
+  height: 62px;
+  padding: 0 20px;
+  border: none;
+  background-color: #218aff;
+  color: #fff;
+  cursor: pointer;
+  float: right;
+  font-size: 2rem;
+  border-radius: 10px;
+}
+
+.text-box form button:hover {
+  background-color: #4398f9;
+}
+
+.emoji-picker-wrapper {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+
+.smiley {
+  font-size: 2rem;
+}
+
+.emoji-btn {
+  position: relative;
+  display: inline-block;
+}
+
+.emoji-btn button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.Picker {
+  position: absolute;
+  top: auto;
+  bottom: calc(100% + 10px);
+  left: 0;
+}
